@@ -2,7 +2,7 @@
   <defs>
     <style>
       .circle {
-        fill: none;
+        fill: white;
         stroke: #00b7b2;
         stroke-width: 4;
       }
@@ -19,3 +19,4 @@
     CxB
   </text>
 </svg>
+
