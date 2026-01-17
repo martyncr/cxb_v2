@@ -1,4 +1,7 @@
-# CxB – Cyber Governance for Boards  
+# CxB – Cyber Governance for Boards - developing version 2 mods
+- action text,
+- list of follow on actions in report
+  
 Cyber Governance Maturity Model Web App
 
 This is a static web application for board-level self‑assessment against the CxB Cyber Governance Code of Practice (domains A–E, actions A1–E5).
@@ -41,3 +44,4 @@ Just deploy the whole folder and ensure `index.html`, `style.css`, `app.js`, `mo
 - Review category scores and radar chart.
 - Use “Print / Save as PDF” to generate a board pack–style output.
 - Use admin mode to prefill and lock certain questions before sharing with the board.
+
