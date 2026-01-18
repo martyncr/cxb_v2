@@ -109,22 +109,33 @@
 
   <section id="model-container"></section>
 
-  <section id="results">
-    <div class="results-header">
-      <h2>Your Results</h2>
+ 
+<section id="results">
+  <div class="results-header">
+    <h2>Your Results</h2>
+  </div>
+  <div class="results-layout">
+    <div class="results-summary">
+      <div id="score-summary"></div>
+      <div id="category-breakdown"></div>
     </div>
-    <div class="results-layout">
-      <div class="results-summary">
-        <div id="score-summary"></div>
-        <div id="category-breakdown"></div>
-      </div>
-      <div class="results-chart">
-        <canvas id="maturityRadar"></canvas>
-      </div>
+    <div class="results-chart">
+      <canvas id="maturityRadar"></canvas>
     </div>
-    <div id="recommendations" class="recommendations-panel"></div>
-  </section>
-</main>
+  </div>
+  <div id="recommendations" class="recommendations-panel"></div>
+
+  <!-- New: Board report section -->
+  <div id="board-report" class="board-report">
+    <h3>Board report – follow-on actions</h3>
+    <p class="board-report-intro">
+      This section summarises the follow-on actions for the maturity levels selected across all domains.
+      It can be used as a board action log or work programme.
+    </p>
+    <div id="board-report-content"></div>
+  </div>
+</section>
+
 
 <footer>
   <p>© CxB – Cyber Governance for Boards · cxb.org.uk</p>
@@ -133,3 +144,9 @@
 <script src="app.js"></script>
 </body>
 </html>
+
+
+
+
+
+

@@ -1,7 +1,3 @@
-/* CxB Cyber Governance Maturity Model */
-/* this is version 1.1 of the app which includes action text notes for each of the 22 actions */
-
-
 let modelData = null;
 let radarChart = null;
 let adminMode = false;
@@ -11,6 +7,8 @@ const modelContainer = document.getElementById("model-container");
 const scoreSummaryEl = document.getElementById("score-summary");
 const categoryBreakdownEl = document.getElementById("category-breakdown");
 const recommendationsEl = document.getElementById("recommendations");
+const boardReportContentEl = document.getElementById("board-report-content");
+
 const resetBtn = document.getElementById("reset-btn");
 const printBtn = document.getElementById("print-btn");
 const toggleAdminBtn = document.getElementById("toggle-admin");
@@ -25,7 +23,7 @@ const sectorSelect = document.getElementById("sector-select");
 const sectorHintEl = document.getElementById("sector-hint");
 
 async function init() {
-  const res = await fetch("modelData.json");
+  const res = await fetch("updated-modelData.json");
   modelData = await res.json();
   updateSectorHint();
   renderModel();
@@ -46,6 +44,7 @@ sectorSelect.addEventListener("change", () => {
 
 function renderModel() {
   modelContainer.innerHTML = "";
+
   modelData.domains.forEach(domain => {
     const section = document.createElement("section");
     section.className = "category";
@@ -65,25 +64,16 @@ function renderModel() {
       const actionMeta = document.createElement("div");
       actionMeta.className = "action-meta";
       actionMeta.innerHTML = `
-        <div class="action-title">${action.title}</div>
+        <div>
+          <div class="action-title">${action.title}</div>
+          <div class="action-text">${action.actionText || ""}</div>
+        </div>
         <div>
           <span class="action-code">${action.code}</span>
           <span class="lock-toggle" data-code="${action.code}">🔓 unlock</span>
         </div>
-
       `;
       block.appendChild(actionMeta);
-
-
-      // *************************************************
-      const actionNotes = document.createElement("div");
-      actionNotes.className = "action-textnote";
-      actionNotes.innerHTML = `
-        <div class="action-notes">${action.notes}</div>
-      
-      `;
-      block.appendChild(actionNotes);
-
 
       const levelsDiv = document.createElement("div");
       levelsDiv.className = "levels";
@@ -103,11 +93,12 @@ function renderModel() {
       listDiv.className = "levels-list";
       listDiv.innerHTML = action.levels
         .map(
-          (lvl, i) => `
-        <label>
-          <input type="radio" name="${action.code}" value="${i}">
-          <strong>${i}:</strong> ${lvl}
-        </label>`
+          lvl => `
+          <label>
+            <input type="radio" name="${action.code}" value="${lvl.level}">
+            <strong>${lvl.level}:</strong> ${lvl.maturityLevel}
+          </label>
+        `
         )
         .join("");
 
@@ -129,7 +120,21 @@ function renderModel() {
             return;
           }
           const val = Number(input.value);
-          notesDiv.textContent = action.followOn[val] || "";
+          const levelObj = action.levels.find(l => l.level === val);
+          if (levelObj) {
+            notesDiv.innerHTML = `
+              <div><strong>Notes:</strong> ${levelObj.notes}</div>
+              ${
+                levelObj.followOn && levelObj.followOn.length
+                  ? `<div><strong>Follow-on actions:</strong><ul>${levelObj.followOn
+                      .map(f => `<li>${f}</li>`)
+                      .join("")}</ul></div>`
+                  : ""
+              }
+            `;
+          } else {
+            notesDiv.textContent = modelData.ui.notesDefault;
+          }
           updateResults();
         });
       });
@@ -193,6 +198,8 @@ function updateResults() {
   let totalScore = 0;
   let count = 0;
 
+  const boardReportByDomain = {};
+
   modelData.domains.forEach(domain => {
     let catTotal = 0;
     let catCount = 0;
@@ -207,6 +214,20 @@ function updateResults() {
         catCount++;
         totalScore += val;
         count++;
+
+        const levelObj = action.levels.find(l => l.level === val);
+        if (levelObj) {
+          if (!boardReportByDomain[domain.name]) {
+            boardReportByDomain[domain.name] = [];
+          }
+          boardReportByDomain[domain.name].push({
+            code: action.code,
+            title: action.title,
+            level: val,
+            maturityLevel: levelObj.maturityLevel,
+            followOn: levelObj.followOn || []
+          });
+        }
       }
     });
 
@@ -258,16 +279,16 @@ function updateResults() {
         else if (stats.average >= 1.8) cBadgeClass = "badge-amber";
       }
       return `
-      <div class="category-breakdown-item">
-        <span class="label">${name}:</span>
-        <span> avg ${avgStr}</span>
-        ${
-          stats.average != null
-            ? `<span class="badge ${cBadgeClass}">score</span>`
-            : ""
-        }
-      </div>
-    `;
+        <div class="category-breakdown-item">
+          <span class="label">${name}:</span>
+          <span> avg ${avgStr}</span>
+          ${
+            stats.average != null
+              ? `<span class="badge ${cBadgeClass}">score</span>`
+              : ""
+          }
+        </div>
+      `;
     })
     .join("");
 
@@ -297,6 +318,7 @@ function updateResults() {
   }
 
   updateRadarChart(selectedStats);
+  updateBoardReport(boardReportByDomain);
 }
 
 function updateRadarChart(stats) {
@@ -348,6 +370,41 @@ function updateRadarChart(stats) {
   });
 }
 
+function updateBoardReport(boardReportByDomain) {
+  if (!Object.keys(boardReportByDomain).length) {
+    boardReportContentEl.innerHTML =
+      "<p>No follow-on actions yet. Select maturity levels to build a board report.</p>";
+    return;
+  }
+
+  boardReportContentEl.innerHTML = Object.entries(boardReportByDomain)
+    .map(([domainName, actions]) => {
+      const actionsHtml = actions
+        .map(a => {
+          const followList =
+            a.followOn && a.followOn.length
+              ? `<ul>${a.followOn.map(f => `<li>${f}</li>`).join("")}</ul>`
+              : "";
+          return `
+            <div class="board-report-action">
+              <div class="board-report-action-title">${a.code} – ${
+            a.title
+          } (level ${a.level})</div>
+              ${followList}
+            </div>
+          `;
+        })
+        .join("");
+      return `
+        <div class="board-report-domain">
+          <h4>${domainName}</h4>
+          ${actionsHtml}
+        </div>
+      `;
+    })
+    .join("");
+}
+
 function attachCommonEvents() {
   resetBtn.addEventListener("click", () => {
     document.querySelectorAll("input[type='radio']").forEach(input => {
@@ -390,8 +447,22 @@ function attachCommonEvents() {
         radios.forEach(r => {
           r.checked = r.value === "1";
         });
+        const levelObj = action.levels.find(l => l.level === 1);
         const notesDiv = document.getElementById(`${action.code}-notes`);
-        notesDiv.textContent = action.followOn[1];
+        if (levelObj) {
+          notesDiv.innerHTML = `
+            <div><strong>Notes:</strong> ${levelObj.notes}</div>
+            ${
+              levelObj.followOn && levelObj.followOn.length
+                ? `<div><strong>Follow-on actions:</strong><ul>${levelObj.followOn
+                    .map(f => `<li>${f}</li>`)
+                    .join("")}</ul></div>`
+                : ""
+            }
+          `;
+        } else {
+          notesDiv.textContent = modelData.ui.notesDefault;
+        }
       });
     });
     updateResults();
