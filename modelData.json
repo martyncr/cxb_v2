@@ -23,6 +23,7 @@
         {
           "code": "A1",
           "title": "Identify and prioritise critical technology, information and services",
+          "notes": "Gain assurance that the technology processes, information and services critical to the organisation's objectives have been identified, prioritised, and agreed.",      
           "levels": [
             "Board has no assurance that critical technology, information, or services are identified or prioritised.",
             "Board receives informal assurance that some critical assets are known, but not documented or agreed.",
@@ -41,6 +42,7 @@
         {
           "code": "A2",
           "title": "Senior ownership and integration of cyber security risks",
+          "notes": "Agree senior ownership of cyber security risks and gain assurance that they are integrated into the organisation’s wider enterprise risk management and internal controls.",
           "levels": [
             "Board has no assurance of senior ownership or integration of cyber risks into enterprise risk management.",
             "Ownership is informal and unclear, with weak links to organisation-wide risk processes.",
@@ -59,6 +61,7 @@
         {
           "code": "A3",
           "title": "Define and communicate cyber risk appetite",
+          "notes": "Define and clearly communicate the organisation’s cyber security risk appetite and gain assurance that the organisation has an action plan to meet these risk expectations.",
           "levels": [
             "Board has no assurance that cyber risk appetite is defined or communicated.",
             "Appetite is discussed informally but not documented or shared.",
@@ -77,6 +80,7 @@
         {
           "code": "A4",
           "title": "Manage supplier and supply-chain cyber risk",
+          "notes": "Gain assurance that supplier information is routinely assessed, proportionate to their level of risk and that the organisation is resilient to cyber security risks from its supply chain and business partners.",
           "levels": [
             "Board has no assurance that supplier cyber risks are assessed or managed.",
             "Some informal checks occur; approach is inconsistent and undocumented.",
@@ -95,6 +99,7 @@
         {
           "code": "A5",
           "title": "Conduct regular cyber risk assessments and mitigations",
+          "notes": "Gain assurance that risk assessments are conducted regularly and that risk mitigations account for recent, or expected, changes in the organisation, technology, regulations or wider threat landscape.",
           "levels": [
             "Board has no assurance that cyber risk assessments are conducted.",
             "Assessments occur occasionally and informally; they ignore changes in the business and threat environment.",
@@ -119,6 +124,7 @@
         {
           "code": "B1",
           "title": "Develop and align a cyber strategy with organisational strategy",
+          "notes": "Gain assurance that the organisation has developed a cyber strategy and this is aligned with, and embedded within, the wider organisational strategy.",
           "levels": [
             "Board has no assurance a cyber strategy exists or aligns to the business strategy.",
             "A draft or informal cyber strategy exists; alignment and embedding are unclear.",
@@ -137,6 +143,7 @@
         {
           "code": "B2",
           "title": "Align cyber strategy with risk appetite, regulation, and change",
+          "notes": "Gain assurance that the cyber strategy aligns with the agreed cyber risk appetite (Action A3), meets relevant regulatory obligations, and accounts for current or expected changes (Action A5).",
           "levels": [
             "Board has no assurance the strategy reflects risk appetite, regulations, or change.",
             "Informal alignment claimed; documentation and testing are weak.",
@@ -155,6 +162,7 @@
         {
           "code": "B3",
           "title": "Allocate resources effectively to manage cyber risks",
+          "notes": "Gain assurance that resources are allocated effectively to manage the agreed cyber risks (Action A3 and A5).",
           "levels": [
             "Not aware of any incident response plan.",
             "Board discusses plan, but it isn't documented.",
@@ -172,7 +180,8 @@
         },
         {
           "code": "B4",
-          "title": "Gain assurance that the cyber strategy is being delivered and effective",
+          "title": "Gain assurance that the cyber strategy is delivered and effective",
+          "notes": "Gain assurance that the cyber strategy is being delivered effectively and is achieving the intended outcomes.",
           "levels": [
             "Board has no assurance on delivery or outcomes of the cyber strategy.",
             "Ad-hoc updates exist; outcomes and evidence are unclear.",
@@ -197,6 +206,7 @@
         {
           "code": "C1",
           "title": "Promote a positive cyber security culture",
+          "notes": "Promote a cyber security culture that encourages positive behaviours and accountability across all levels. This should be aligned with the organisation’s strategy (Action B1).",
           "levels": [
             "Board has no assurance that a cyber security culture exists or supports the business strategy.",
             "Cyber culture is informally encouraged, but not documented or measured.",
@@ -215,6 +225,7 @@
         {
           "code": "C2",
           "title": "Establish clear cyber security policies that support positive behaviours",
+          "notes": "Gain assurance that there are clear policies that support a positive cyber security culture.",
           "levels": [
             "Board has no assurance that cyber security policies exist or support positive behaviours.",
             "Policies exist informally or in draft, but not approved or communicated.",
@@ -233,6 +244,7 @@
         {
           "code": "C3",
           "title": "Improve board cyber literacy and secure behaviours",
+          "notes": "Undertake training to improve your own cyber literacy and take responsibility for the security of the data and digital assets that you use.",
           "levels": [
             "Board doesn't receive cyber training or take personal responsibility for secure behaviours.",
             "Board completes basic training ad-hoc; personal responsibility is not documented or tracked.",
@@ -251,6 +263,7 @@
         {
           "code": "C4",
           "title": "Assure staff cyber training, education and awareness",
+          "notes": "Gain assurance, using suitable metrics, that the organisation has an effective cyber security training, education and awareness programme.",
           "levels": [
             "Board has no assurance that staff receive cyber training or awareness activities.",
             "Training occurs ad-hoc, with no metrics or assurance on coverage or effectiveness.",
@@ -275,6 +288,7 @@
         {
           "code": "D1",
           "title": "Incident response and recovery plan",
+          "notes": "Gain assurance that the organisation has a plan to respond to and recover from a cyber incident impacting business critical technology processes, information and services.",
           "levels": [
             "Board has no assurance that an incident response and recovery plan exists.",
             "A plan exists informally or in draft, but not approved or tested.",
@@ -292,6 +306,7 @@
         },
         {
           "code": "D2",
+          "notes": "Gain assurance that there is at least annual exercising of the plan involving relevant internal and external stakeholders and that lessons from the exercise are reflected in the incident plan (Action D1) and risk assessments (Action A5).",
           "title": "Exercising the incident plan and learning lessons",
           "levels": [
             "Board has no assurance that the incident plan is tested or improved.",
@@ -311,6 +326,7 @@
         {
           "code": "D3",
           "title": "Board role and regulatory obligations during incidents",
+          "notes": "In the event of an incident, take responsibility for individual regulatory obligations, such as reporting, and support the organisation in critical decision making and external communications.",
           "levels": [
             "Board has no clarity on its regulatory obligations or role during an incident.",
             "Board has basic awareness, but roles and escalation paths are unclear.",
@@ -329,6 +345,7 @@
         {
           "code": "D4",
           "title": "Post-incident reviews and learning",
+          "notes": "Gain assurance that a post incident review process is in place to incorporate lessons learned into future risk assessments (Action A5), response and recovery plans (Action D1) and exercising (Action D2).",
           "levels": [
             "Board has no assurance that lessons from incidents are reviewed or applied.",
             "Reviews occur informally, with limited documentation or follow-up.",
@@ -353,6 +370,7 @@
         {
           "code": "E1",
           "title": "Cyber governance structure and roles",
+          "notes": "Establish a cyber governance structure which is embedded within the wider governance structure of the organisation. This should include clear definition of roles and responsibilities, including ownership of cyber at executive and non-executive director level.",
           "levels": [
             "Board has no assurance of a defined cyber governance structure or roles.",
             "Governance is informal or draft, with unclear responsibilities and escalation.",
@@ -371,6 +389,7 @@
         {
           "code": "E2",
           "title": "Formal reporting, metrics and tolerances",
+          "notes": "Require formal reporting on at least a quarterly basis, set suitable metrics to track, and agree tolerances for each. These should be aligned to the cyber strategy (Action B1) and based on the agreed cyber risk appetite (Action A3).",
           "levels": [
             "Board doesn't receive any formal cyber reporting or metrics.",
             "Reporting is ad-hoc with limited metrics and no agreed tolerances.",
@@ -389,6 +408,7 @@
         {
           "code": "E3",
           "title": "Two-way dialogue with senior executives",
+          "notes": "Establish regular two-way dialogue with relevant senior executives, including but not limited to, the chief information security officer (or equivalent).",
           "levels": [
             "Board has no structured dialogue with relevant senior executives on cyber.",
             "Dialogue is infrequent and informal; expectations are unclear.",
@@ -407,6 +427,7 @@
         {
           "code": "E4",
           "title": "Audit and assurance over cyber",
+          "notes": "Gain assurance that cyber security considerations (including the actions in this code) are integrated and consistent with existing internal and external audit and assurance mechanisms.",
           "levels": [
             "Board has no assurance that cyber is covered by audit or assurance mechanisms.",
             "Cyber appears in isolated audits; scope and consistency are unclear.",
@@ -425,6 +446,7 @@
         {
           "code": "E5",
           "title": "Executive awareness of regulations and best practice",
+          "notes": "Gain assurance that senior executives are aware of relevant regulatory obligations, as well as best practice contained within other Codes of Practice.",
           "levels": [
             "Board has no assurance that executives know relevant regulations or best practice codes.",
             "Awareness is informal, with no evidence of application to the business.",

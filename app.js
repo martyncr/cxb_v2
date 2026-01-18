@@ -1,3 +1,7 @@
+/* CxB Cyber Governance Maturity Model */
+/* this is version 1.1 of the app which includes action text notes for each of the 22 actions */
+
+
 let modelData = null;
 let radarChart = null;
 let adminMode = false;
@@ -66,8 +70,20 @@ function renderModel() {
           <span class="action-code">${action.code}</span>
           <span class="lock-toggle" data-code="${action.code}">🔓 unlock</span>
         </div>
+
       `;
       block.appendChild(actionMeta);
+
+
+      // *************************************************
+      const actionNotes = document.createElement("div");
+      actionNotes.className = "action-textnote";
+      actionNotes.innerHTML = `
+        <div class="action-notes">${action.notes}</div>
+      
+      `;
+      block.appendChild(actionNotes);
+
 
       const levelsDiv = document.createElement("div");
       levelsDiv.className = "levels";
