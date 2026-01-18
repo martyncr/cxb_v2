@@ -1,4 +1,5 @@
-# CxB – Cyber Governance for Boards - developing version 2 mods
+# CxB – Cyber Governance for Boards - version 2
+
 - action text,
 - list of follow on actions in report
   
@@ -12,6 +13,7 @@ This is a static web application for board-level self‑assessment against the C
 - `style.css` – CxB styling (colours, layout, print styles)
 - `app.js` – logic, scoring, radar chart, admin mode
 - `modelData.json` – all maturity model content (A1–E5), sector hints, UI strings
+- `updated-modelData.json` – all maturity model content (A1–E5), sector hints, UI strings, action text, and follow on actions
 - `assets/`
   - `logo.svg` – primary CxB logo
   - `logo-dark.svg` – white-on-navy version
@@ -44,4 +46,5 @@ Just deploy the whole folder and ensure `index.html`, `style.css`, `app.js`, `mo
 - Review category scores and radar chart.
 - Use “Print / Save as PDF” to generate a board pack–style output.
 - Use admin mode to prefill and lock certain questions before sharing with the board.
+
 
