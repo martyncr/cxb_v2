@@ -1,3 +1,9 @@
+/*  Web-based Cyber Governance Maturity Model
+    written by Martyn Croft.
+    Derived from the Cyber Governance Code of Practice 
+    and based on the maturity model spreadsheet developed
+    by CxB : Cyber Governance for Boards 2025 - 2026        */
+
 let modelData = null;
 let radarChart = null;
 let adminMode = false;
