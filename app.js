@@ -22,8 +22,12 @@ const dateInput = document.getElementById("assessment-date");
 const sectorSelect = document.getElementById("sector-select");
 const sectorHintEl = document.getElementById("sector-hint");
 
+const exportCsvBtn = document.getElementById("export-csv-btn");
+const importCsvBtn = document.getElementById("import-csv-btn");
+const csvFileInput = document.getElementById("csv-file-input");
+
 async function init() {
-  const res = await fetch("updated-modelData.json");
+  const res = await fetch("MatModelData.json");
   modelData = await res.json();
   updateSectorHint();
   renderModel();
@@ -481,6 +485,253 @@ function attachCommonEvents() {
 
   [orgNameInput, boardNameInput, dateInput].forEach(input => {
     input.addEventListener("input", updateResults);
+  });
+}
+
+/**
+ * Export current selections to CSV
+ */
+function exportToCSV() {
+  if (!modelData) return;
+
+  // Get metadata
+  const orgName = orgNameInput.value || "Your organisation";
+  const boardName = boardNameInput.value || "Board / Committee";
+  const dateVal = dateInput.value || new Date().toISOString().split('T')[0];
+  const sector = sectorSelect.value || "generic";
+
+  // Build CSV content
+  let csvContent = "Cyber Governance Maturity Assessment\n";
+  csvContent += `Organisation,${escapeCSV(orgName)}\n`;
+  csvContent += `Board/Committee,${escapeCSV(boardName)}\n`;
+  csvContent += `Assessment Date,${dateVal}\n`;
+  csvContent += `Sector,${sector}\n`;
+  csvContent += `Export Date,${new Date().toISOString()}\n`;
+  csvContent += "\n";
+  
+  // Headers
+  csvContent += "Domain,Action Code,Action Title,Selected Level,Maturity Description,Locked\n";
+
+  // Data rows
+  modelData.domains.forEach(domain => {
+    domain.actions.forEach(action => {
+      const checked = document.querySelector(`input[name="${action.code}"]:checked`);
+      const selectedLevel = checked ? checked.value : "";
+      const isLocked = lockedActions.has(action.code) ? "Yes" : "No";
+      
+      let maturityDesc = "";
+      if (selectedLevel) {
+        const levelObj = action.levels.find(l => l.level === Number(selectedLevel));
+        if (levelObj) {
+          maturityDesc = levelObj.maturityLevel;
+        }
+      }
+
+      csvContent += `${escapeCSV(domain.name)},${action.code},${escapeCSV(action.title)},${selectedLevel},${escapeCSV(maturityDesc)},${isLocked}\n`;
+    });
+  });
+
+  // Create download
+  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+  const link = document.createElement('a');
+  const url = URL.createObjectURL(blob);
+  
+  const filename = `maturity-assessment-${dateVal}-${sanitizeFilename(orgName)}.csv`;
+  link.setAttribute('href', url);
+  link.setAttribute('download', filename);
+  link.style.visibility = 'hidden';
+  
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+/**
+ * Import selections from CSV
+ */
+function importFromCSV(file) {
+  if (!file || !modelData) return;
+
+  const reader = new FileReader();
+  
+  reader.onload = function(e) {
+    const content = e.target.result;
+    parseAndApplyCSV(content);
+  };
+  
+  reader.onerror = function() {
+    alert('Error reading file. Please try again.');
+  };
+  
+  reader.readAsText(file);
+}
+
+/**
+ * Parse CSV content and apply to model
+ */
+function parseAndApplyCSV(content) {
+  const lines = content.split('\n');
+  let dataStartIndex = -1;
+  let importedMetadata = {};
+
+  // Find metadata and data start
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+    
+    if (line.startsWith('Organisation,')) {
+      importedMetadata.orgName = parseCSVValue(line.split(',')[1]);
+    } else if (line.startsWith('Board/Committee,')) {
+      importedMetadata.boardName = parseCSVValue(line.split(',')[1]);
+    } else if (line.startsWith('Assessment Date,')) {
+      importedMetadata.date = parseCSVValue(line.split(',')[1]);
+    } else if (line.startsWith('Sector,')) {
+      importedMetadata.sector = parseCSVValue(line.split(',')[1]);
+    } else if (line.startsWith('Domain,Action Code,')) {
+      dataStartIndex = i + 1;
+      break;
+    }
+  }
+
+  if (dataStartIndex === -1) {
+    alert('Invalid CSV format. Could not find data section.');
+    return;
+  }
+
+  // Apply metadata
+  if (importedMetadata.orgName) orgNameInput.value = importedMetadata.orgName;
+  if (importedMetadata.boardName) boardNameInput.value = importedMetadata.boardName;
+  if (importedMetadata.date) dateInput.value = importedMetadata.date;
+  if (importedMetadata.sector) {
+    sectorSelect.value = importedMetadata.sector;
+    updateSectorHint();
+  }
+
+  // Reset current state
+  document.querySelectorAll("input[type='radio']").forEach(input => {
+    input.checked = false;
+    input.disabled = false;
+  });
+  lockedActions.clear();
+
+  // Parse and apply data
+  let importCount = 0;
+  let lockCount = 0;
+
+  for (let i = dataStartIndex; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (!line) continue;
+
+    const parts = parseCSVLine(line);
+    if (parts.length < 6) continue;
+
+    const actionCode = parts[1];
+    const selectedLevel = parts[3];
+    const isLocked = parts[5];
+
+    if (selectedLevel) {
+      const radio = document.querySelector(`input[name="${actionCode}"][value="${selectedLevel}"]`);
+      if (radio) {
+        radio.checked = true;
+        importCount++;
+
+        // Trigger change event to update notes
+        const event = new Event('change');
+        radio.dispatchEvent(event);
+      }
+    }
+
+    if (isLocked === 'Yes') {
+      lockedActions.add(actionCode);
+      updateLockState(actionCode, true);
+      lockCount++;
+    }
+  }
+
+  updateResults();
+  
+  alert(`Import successful!\n${importCount} actions imported.\n${lockCount} actions locked.`);
+}
+
+/**
+ * Escape CSV values
+ */
+function escapeCSV(value) {
+  if (value == null) return '';
+  const str = String(value);
+  if (str.includes(',') || str.includes('"') || str.includes('\n')) {
+    return '"' + str.replace(/"/g, '""') + '"';
+  }
+  return str;
+}
+
+/**
+ * Parse CSV value (remove quotes if present)
+ */
+function parseCSVValue(value) {
+  if (!value) return '';
+  value = value.trim();
+  if (value.startsWith('"') && value.endsWith('"')) {
+    return value.slice(1, -1).replace(/""/g, '"');
+  }
+  return value;
+}
+
+/**
+ * Parse CSV line handling quoted values
+ */
+function parseCSVLine(line) {
+  const result = [];
+  let current = '';
+  let inQuotes = false;
+  
+  for (let i = 0; i < line.length; i++) {
+    const char = line[i];
+    
+    if (char === '"') {
+      if (inQuotes && line[i + 1] === '"') {
+        current += '"';
+        i++;
+      } else {
+        inQuotes = !inQuotes;
+      }
+    } else if (char === ',' && !inQuotes) {
+      result.push(current);
+      current = '';
+    } else {
+      current += char;
+    }
+  }
+  
+  result.push(current);
+  return result.map(v => parseCSVValue(v));
+}
+
+/**
+ * Sanitize filename
+ */
+function sanitizeFilename(name) {
+  return name.replace(/[^a-z0-9]/gi, '-').toLowerCase().substring(0, 30);
+}
+
+// Attach event listeners
+if (exportCsvBtn) {
+  exportCsvBtn.addEventListener('click', exportToCSV);
+}
+
+if (importCsvBtn) {
+  importCsvBtn.addEventListener('click', () => {
+    csvFileInput.click();
+  });
+}
+
+if (csvFileInput) {
+  csvFileInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      importFromCSV(file);
+      // Reset input so same file can be imported again
+      e.target.value = '';
+    }
   });
 }
 

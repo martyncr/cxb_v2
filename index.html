@@ -85,21 +85,31 @@
       <div class="controls">
         <button id="reset-btn" class="btn btn-secondary">Reset assessment</button>
         <button id="print-btn" class="btn btn-primary">Print / Save as PDF</button>
+
       </div>
     </div>
   </section>
 
   <section class="admin-panel">
     <button id="toggle-admin" class="btn btn-ghost">Toggle admin mode</button>
+     
     <div id="admin-content" class="admin-content hidden">
       <h3>Admin mode</h3>
       <p class="admin-help">
         Use admin mode to prefill ratings and lock specific questions before sharing with the board
         (e.g. where minimum expected practice is set). Changes are stored in this browser only.
+        The assessment can be saved by exporting to a CSV file, and resumed later by importing the file.
+        The completed assessment should be exported to CSV and the file submitted to your CxB administrator.
       </p>
       <div class="admin-actions">
         <button id="prefill-minimum" class="btn btn-secondary">Prefill all as level 1 (baseline)</button>
         <button id="clear-locks" class="btn btn-secondary">Unlock all actions</button>
+
+        <!-- Adding these buttons for CSV functionality: -->
+        <button id="export-csv-btn" class="btn btn-secondary">Export to CSV</button>
+        <button id="import-csv-btn" class="btn btn-secondary">Import from CSV</button>
+        <input type="file" id="csv-file-input" accept=".csv" style="display: none;">
+
       </div>
       <p class="admin-note">
         To lock an individual action, set a level then click the padlock icon next to it (while admin mode is on).

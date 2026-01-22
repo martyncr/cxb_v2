@@ -1,0 +1,1303 @@
+{
+  "ui": {
+    "notesDefault": "Select a level to view maturity notes and follow-on actions.",
+    "noRatingsMessage": "Once all actions have a rating, this page can be exported as a board pack. Use the follow-on actions under each item to shape your forward plan and committee work programme."
+  },
+  "sectors": {
+    "generic": "Use this model as a generic benchmark across strategy, risk, people, incident readiness and assurance.",
+    "financial": "For financial services, pay particular attention to supplier risk (A4), resilience (D1–D2) and regulatory obligations (D3, E5).",
+    "health": "For health and care, focus on protecting sensitive data (A1, A5), staff behaviours (C1–C4) and incident response (D1–D4).",
+    "public": "For public sector, alignment with statutory duties and transparency is key – emphasise risk integration (A2), assurance (E4) and regulatory readiness (E5).",
+    "critical": "For critical infrastructure, prioritise resilience of critical services (A1, D1–D2), supplier chains (A4) and board readiness (D3, E1–E2)."
+  },
+
+  
+  "domains": [
+    {
+      "code": "A",
+      "name": "Risk Management",
+      "actions": [
+        {
+          "code": "A1",
+          "title": "Identify and prioritise critical technology, information and services",
+          "actionText": "Gain assurance that the technology processes, information and services critical to the organisation’s objectives have been identified, prioritised and agreed.",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no assurance that critical technology, information, or services are identified or prioritised",
+              "notes": "The board cannot confirm whether management knows what is most critical to keep the business running. Dependencies and impacts are unclear, leaving the organisation exposed.",
+              "followOn": [
+                "Ask management to confirm if a list of critical systems and data exists.",
+                "Request a summary of how these were prioritised (e.g., based on business impact).",
+                "Add this topic to the board agenda for regular updates."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Board receives informal assurance that some critical assets are known, but not documented or agreed.",
+              "notes": "Management may have an informal understanding of key systems, but there is no formal documentation or board-level agreement.",
+              "followOn": [
+                "Require a documented inventory of critical assets with owners and impact ratings.",
+                "Ask for a gap analysis comparing informal lists to actual operations.",
+                "Minute expectations and set a review cadence (e.g., quarterly)."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Board is assured a documented list exists, but prioritisation and review are limited.",
+              "notes": "A list of critical assets is available, but the board cannot confirm how prioritisation is done or whether it is updated regularly.",
+              "followOn": [
+                "Set minimum prioritisation criteria (business impact, legal/regulatory implications).",
+                "Require quarterly attestations that changes are captured.",
+                "Commission a sample check for completeness."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Board is assured critical assets are identified, prioritised, and reviewed periodically",
+              "notes": "Management has a structured process for identifying and prioritising critical assets, and the board receives periodic updates.",
+              "followOn": [
+                "Ensure linkage to organisational objectives and risk appetite.",
+                "Define triggers for out-of-cycle updates (e.g., major supplier change).",
+                "Request simple board metrics (e.g., % of critical assets with recovery plans)."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Board is assured the process is embedded, routinely updated, and aligned to business goals.",
+              "notes": "Identification and prioritisation of critical assets are part of normal governance and updated proactively as the business changes.",
+              "followOn": [
+                "Maintain annual independent assurance over completeness and prioritisation.",
+                "Require cross-functional validation to stay aligned with strategy.",
+                "Benchmark against peers and refine board tolerances."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "A2",
+          "title": "Senior ownership and integration of cyber security risks",
+          "actionText": "Agree senior ownership of cyber security risks and gain assurance that they are integrated into the organisation’s wider enterprise risk management and internal controls.",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no assurance of senior ownership or integration of cyber risks into organisation‑wide risk management and internal control",
+              "notes": "No one is clearly accountable for cyber risk. Cyber risks are not included in the company’s main risk processes or control checks. The board cannot see how cyber threats are identified, assessed, or managed.",
+              "followOn": [
+                "Appoint and minute a senior executive as Cyber Risk Owner (e.g., Chief Operating Officer or Finance Director).",
+                "Require cyber risks to be added to the enterprise risk register with named owners and mitigation plans.",
+                "Direct internal audit (or an independent reviewer) to assess current governance and report gaps to the board."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Ownership is informal and unclear, with weak links to organisation‑wide risk processes.",
+              "notes": "Management acknowledges cyber risk but responsibilities are vague, reporting is ad‑hoc, and cyber risks are not consistently captured alongside other business risks. Control responsibilities and escalation routes are uncertain.",
+              "followOn": [
+                "Request a simple roles and responsibilities matrix (RACI) for cyber governance.",
+                "Require cyber risks to use the same rating scales as other risks and appear in regular risk reports.",
+                "Set a quarterly reporting cadence with exception alerts when thresholds are breached."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "A named senior owner exists; integration into organisation‑wide risk management is partial.",
+              "notes": "A senior executive is accountable, and cyber risks appear in the risk register, but mapping from risks to specific controls and tests is inconsistent. Escalation and decision‑making are slower than needed.",
+              "followOn": [
+                "Mandate risk‑to‑control mapping with defined controls and testing plans.",
+                "Require consolidated indicators aligned to the board’s risk appetite.",
+                "Ask for clear escalation protocols (who informs the board, how quickly, and with what information)."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Clear ownership and full integration into enterprise‑wide risk management and internal controls.",
+              "notes": "The senior owner is effective, cyber risks are tracked in the same way as other major risks, and controls are tested regularly. Reporting to the board is timely, using agreed indicators and thresholds, with actions tracked to completion.",
+              "followOn": [
+                "Commission independent effectiveness reviews and present results at board level.",
+                "Require evidence that actions are resourced and tracked against milestones.",
+                "Schedule an annual board deep‑dive on top cyber risks and how they are being reduced."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Ownership and integration are embedded, reviewed regularly, and continuously improved.",
+              "notes": "Cyber risk governance is part of normal management practice. Indicators and controls are refined as the business, regulation, and threats evolve. The board gets concise, decision‑ready reporting and sees ongoing improvements.",
+              "followOn": [
+                "Maintain external benchmarking and board training to stay current.",
+                "Require a continuous improvement plan with periodic updates.",
+                "Refresh board thresholds and reporting expectations annually."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "A3",
+          "title": "Define and communicate cyber risk appetite",
+          "actionText": "Define and clearly communicate the organisation’s cyber security risk appetite and gain assurance that the organisation has an action plan to meet these risk expectations.",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no assurance that cyber risk appetite is defined or communicated.",
+              "notes": "The organisation has not agreed how much cyber risk it can tolerate. Decisions on spending and priorities are inconsistent, leaving the board unable to judge if risks are acceptable.",
+              "followOn": [
+                "Request management to draft a simple cyber risk appetite statement.",
+                "Ask for examples of how the appetite will guide decisions.",
+                "Include cyber risk appetite in the next board strategy discussion."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Appetite is discussed informally but not documented or shared.",
+              "notes": "Management may talk about risk tolerance, but there is no formal statement or communication. Staff lack clear guidance on acceptable risk levels.",
+              "followOn": [
+                "Require a documented risk appetite statement aligned to business objectives.",
+                "Mandate communication of the approved appetite to senior leadership.",
+                "Ask for a plan showing how current controls and spending will meet the appetite."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "A documented appetite exists; supporting plan and metrics are limited.",
+              "notes": "The board has a written statement, but there is little assurance that actions and measures are in place to achieve it. Reporting is minimal.",
+              "followOn": [
+                "Set clear indicators and thresholds linked to the appetite.",
+                "Require a funded, time‑bound action plan to close gaps.",
+                "Add quarterly variance reporting with corrective actions."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Appetite is clear, communicated, and supported by an action plan.",
+              "notes": "The organisation uses the appetite to guide decisions. A plan exists, and the board receives updates. Reviews occur periodically.",
+              "followOn": [
+                "Introduce scenario testing to validate appetite.",
+                "Link appetite to strategic changes.",
+                "Commission independent validation of data and reports."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Appetite and plans are embedded, reviewed, and adjusted proactively.",
+              "notes": "Cyber risk appetite is part of normal governance. It is refreshed regularly based on business changes and threat intelligence.",
+              "followOn": [
+                "Refresh appetite annually using horizon scanning.",
+                "Ensure major investments reference appetite impacts.",
+                "Consider publishing a board statement on cyber governance."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "A4",
+          "title": "Manage supplier and supply‑chain cyber risk",
+          "actionText": "Gain assurance that supplier information is routinely assessed, proportionate to their level of risk and that the organisation is resilient to cyber security risks from its supply chain and business partners.",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no assurance that supplier cyber risks are assessed or managed.",
+              "notes": "There is no structured process to check suppliers’ security. The organisation may depend on vendors without understanding their risk, leading to hidden exposure.",
+              "followOn": [
+                "Ask for a list of key suppliers and their current assurance status.",
+                "Require basic contract clauses (incident notification, minimum protections, right to audit).",
+                "Add supplier cyber risk to the board risk review and assign committee oversight."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Some informal checks occur; approach is inconsistent and undocumented.",
+              "notes": "Supplier vetting is ad‑hoc. Critical vendors may not be prioritised, and results are not tracked or kept up to date.",
+              "followOn": [
+                "Mandate a supplier risk policy with tiering based on business impact and data sensitivity.",
+                "Require standard due‑diligence for higher tiers.",
+                "Set reporting on onboarding/renewals where assurance is missing."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Documented assessments exist, but coverage and monitoring are limited.",
+              "notes": "There is a process and records, but not all critical suppliers are covered, and ongoing monitoring is weak. Contingency planning is unclear.",
+              "followOn": [
+                "Set minimum assurance levels per tier.",
+                "Require ongoing monitoring for Tier‑1/Tier‑2 suppliers.",
+                "Commission sample audits of high‑risk suppliers."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Supplier risks are routinely assessed, proportionate to risk level, with resilience measures in place.",
+              "notes": "Critical suppliers have stronger checks, findings are tracked, and resilience is considered. The board sees consistent, risk‑based coverage.",
+              "followOn": [
+                "Require contingency/exit plans and periodic tests.",
+                "Ask for aggregation risk analysis.",
+                "Introduce board metrics (coverage %, remediation time, contract clauses)."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Supply‑chain resilience is embedded, regularly reviewed, and tested.",
+              "notes": "Supplier assurance is built into onboarding, monitoring, and exit. Resilience is tested through scenarios, and lessons learned drive improvements.",
+              "followOn": [
+                "Maintain independent assurance over supplier risk management.",
+                "Run scenario exercises including a critical supplier compromise.",
+                "Benchmark supplier governance against sector norms."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "A5",
+          "title": "Conduct regular cyber risk assessments and mitigations",
+          "actionText": "Gain assurance that risk assessments are conducted regularly and that risk mitigations account for recent, or expected, changes in the organisation, technology, regulations or wider threat landscape.",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no assurance that cyber risk assessments are conducted.",
+              "notes": "The board cannot judge cyber exposure or whether controls are effective. There is no regular review of risks, and management may be unaware of changes that increase risk.",
+              "followOn": [
+                "Require a risk assessment schedule and method.",
+                "Ask for an initial summary of top risks, controls, and gaps.",
+                "Direct internal audit or an independent reviewer to assess the process."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Assessments occur occasionally and informally; they ignore changes in the business and threat environment.",
+              "notes": "Management reviews some risks, but not on a set timetable, and reviews don’t consistently consider new technology, suppliers, regulations, or current threats.",
+              "followOn": [
+                "Set triggers for out‑of‑cycle assessments.",
+                "Require documented change tracking.",
+                "Establish quarterly summary reporting of assessment outcomes."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Documented assessments occur, but responsiveness and tracking of mitigations are limited.",
+              "notes": "There is a written assessment process, but updates lag behind changes, and actions are not tracked to completion.",
+              "followOn": [
+                "Mandate action logs with owners and deadlines.",
+                "Require evidence that assessments incorporate incidents and threat information.",
+                "Commission spot checks to validate ratings and control effectiveness."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Board is assured assessments are regular and account for changes in the organisation and wider threats.",
+              "notes": "Assessments follow a set timetable, incorporate changes, and use current threat information. Reporting is clear and consistent.",
+              "followOn": [
+                "Introduce forward‑looking analysis in board papers.",
+                "Link assessment outcomes to investment planning.",
+                "Request lessons learned from incidents to be fed back into assessments."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Assessment and mitigation are embedded, proactive, and provide timely, decision‑ready insight.",
+              "notes": "Risk assessment is part of normal management practice, updated quickly when things change, and produces concise reports the board can act on.",
+              "followOn": [
+                "Maintain annual independent validation of the assessment method.",
+                "Refresh board metrics and thresholds to detect early warning signs.",
+                "Require cross‑functional reviews to align cyber risk with business strategy."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "B",
+      "name": "Strategy",
+      "actions": [
+        {
+          "code": "B1",
+          "title": "Develop and align a cyber strategy with organisational strategy",
+          "actionText": "Gain assurance that the organisation has developed a cyber strategy and this is aligned with, and embedded within, the wider organisational strategy.",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no assurance a cyber strategy exists or aligns to the business strategy.",
+              "notes": "There is no written cyber strategy. Cyber activities are ad‑hoc and may conflict with business goals, budgets, or timelines. The board cannot see how cyber supports growth, customers, or operations.",
+              "followOn": [
+                "Ask management to confirm whether a cyber strategy exists and share a short summary.",
+                "Mandate creation of a concise, business‑aligned cyber strategy (one‑to‑three pages) for board review.",
+                "Add cyber strategy approval and annual review to the board agenda."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "A draft or informal cyber strategy exists; alignment and embedding are unclear.",
+              "notes": "There may be slides or notes but no approved, living document. Staff are not guided by it, and business stakeholders were not formally involved.",
+              "followOn": [
+                "Require a board‑approved strategy document with clear goals, timelines, and owners.",
+                "Ask for evidence of business stakeholder input (operations, finance, legal, product).",
+                "Set a quarterly update to track progress on strategic actions."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "A documented cyber strategy exists; partial alignment with the business and limited adoption.",
+              "notes": "The strategy references business goals but does not consistently drive planning, budgeting, or project roadmaps. Communication across the organisation is uneven.",
+              "followOn": [
+                "Require a mapping of cyber strategy goals to business objectives and key initiatives.",
+                "Ask for a communication plan (how managers and teams will use the strategy).",
+                "Request evidence of adoption in project plans and budgets."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Cyber strategy is aligned and embedded in planning, budgeting, and change processes.",
+              "notes": "Cyber goals inform investment, project gates, supplier choices, and performance measures. Business teams understand their role and report progress.",
+              "followOn": [
+                "Introduce board metrics tied to strategy outcomes (e.g., % of critical processes covered by resilience measures).",
+                "Require cross‑functional governance (e.g., steering group) with minutes to the board.",
+                "Commission independent review of strategy execution effectiveness."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Strategy is business‑led, routinely refreshed, and supports competitive advantage.",
+              "notes": "Cyber is part of how the organisation wins and operates (trust, reliability, compliance). The strategy evolves with market, technology, and customer expectations.",
+              "followOn": [
+                "Schedule an annual strategic refresh informed by market and regulatory outlook.",
+                "Ensure major investments reference the cyber strategy explicitly.",
+                "Benchmark against sector peers and relevant codes to drive continuous improvement."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "B2",
+          "title": "Align cyber strategy with risk appetite, regulation, and change",
+          "actionText": "Gain assurance that the cyber strategy aligns with the agreed cyber risk appetite (Action A3), meets relevant regulatory obligations, and accounts for current or expected changes (Action A5).",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no assurance the strategy reflects risk appetite, regulations, or change.",
+              "notes": "The strategy (if any) does not reference the board‑approved risk appetite, legal duties, or upcoming changes. Compliance gaps may exist.",
+              "followOn": [
+                "Require an alignment statement: how the strategy meets risk appetite, laws/regulations, and planned changes.",
+                "Ask for a gap list with actions and dates to close gaps.",
+                "Add regulatory compliance status to the board pack."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Informal alignment claimed; documentation and testing are weak.",
+              "notes": "Management asserts the strategy fits the appetite and rules, but there is no clear evidence or monitoring. Future changes are not planned into the strategy.",
+              "followOn": [
+                "Request written mapping of strategy items to appetite thresholds and regulatory requirements.",
+                "Set checkpoints for upcoming changes (e.g., cloud migration) to update the strategy.",
+                "Mandate legal/compliance sign‑off on relevant strategy elements."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Documented alignment exists; coverage and responsiveness are limited.",
+              "notes": "There is a mapping to appetite and regulations, but metrics, testing, and updates lag. Some areas (e.g., suppliers or legacy systems) are under‑addressed.",
+              "followOn": [
+                "Require key indicators linked to appetite (with thresholds) and compliance evidence.",
+                "Ask for an update cycle tied to business and technology change triggers.",
+                "Commission spot checks on high‑risk areas (e.g., data protection, supplier contracts)."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Strategy is clearly aligned to appetite and regulations and updates with change.",
+              "notes": "Measures track adherence to appetite; compliance obligations are met and evidenced; planned changes are built into roadmaps.",
+              "followOn": [
+                "Introduce scenario testing to confirm the strategy holds under stress.",
+                "Require exceptions reporting when thresholds are breached, with corrective actions.",
+                "Obtain independent assurance over compliance‑critical controls."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Alignment is embedded and proactive, with early adaptation to new risks and rules.",
+              "notes": "The organisation anticipates changes and adjusts the strategy ahead of time, keeping risk within appetite and staying compliant without disruption.",
+              "followOn": [
+                "Schedule annual horizon scans (threat, technology, regulation) into board planning.",
+                "Ensure investment decisions show impact on appetite and compliance posture.",
+                "Benchmark alignment practice with industry standards and peers."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "B3",
+          "title": "Allocate resources effectively to manage cyber risks",
+          "actionText": "Gain assurance that resources are allocated effectively to manage the agreed cyber risks (Action A3 and A5).",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Not aware of any incident response plan",
+              "notes": "The board has no visibility of an incident response plan. There is no documented process for handling cyber incidents, and responsibilities are unclear.",
+              "followOn": [
+                "Request confirmation from management on whether a plan exists.",
+                "Initiate development of a basic incident response framework.",
+                "Assign ownership for creating and maintaining the plan."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Board discusses plan, but it isn't documented",
+              "notes": "The board has discussed the need for an incident response plan, but no formal document exists. Actions remain verbal and unstructured.",
+              "followOn": [
+                "Direct management to draft a formal plan with defined roles and steps.",
+                "Set a timeline for completion and board review.",
+                "Ensure alignment with regulatory and contractual obligations."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Aware of draft plan on paper, but no completion date",
+              "notes": "A draft plan exists but is incomplete or lacks approval. The board is aware but has not set deadlines or ensured readiness.",
+              "followOn": [
+                "Require management to finalize and approve the plan by a specific date.",
+                "Validate that the plan includes escalation paths, communication protocols, and external obligations.",
+                "Schedule initial testing (e.g., tabletop exercise)."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Board has seen plan, but not periodically reviewed",
+              "notes": "The board has reviewed and approved the plan, but there is no structured process for regular updates or testing.",
+              "followOn": [
+                "Establish a review cycle (at least annually or after major changes).",
+                "Request evidence of testing and lessons learned.",
+                "Ensure integration with business continuity and disaster recovery plans."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Board is assured plan is regularly reviewed as required",
+              "notes": "The board receives assurance that the incident response plan is up‑to‑date, tested, and aligned with evolving threats and regulations. Reviews are embedded in governance processes.",
+              "followOn": [
+                "Continue periodic assurance reporting with metrics (e.g., test results, improvements).",
+                "Benchmark against industry standards and regulatory requirements.",
+                "Expand scope to include supply chain and third‑party incident response readiness."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "B4",
+          "title": "Gain assurance that the cyber strategy is being delivered and effective",
+          "actionText": "Gain assurance that the cyber strategy is being delivered effectively and is achieving the intended outcomes.",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no assurance on delivery or outcomes of the cyber strategy.",
+              "notes": "There are no progress updates, measures, or evidence that actions are completed or that risk is reducing.",
+              "followOn": [
+                "Require a delivery plan with milestones, owners, and due dates.",
+                "Ask for simple outcome measures (e.g., coverage of critical assets, recovery test pass rates).",
+                "Add a standing progress report to board agendas."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Ad‑hoc updates exist; outcomes and evidence are unclear.",
+              "notes": "Updates focus on activity (what was done) not impact (what changed). Slippage and blockers are not clearly escalated.",
+              "followOn": [
+                "Mandate traffic‑light status with evidence for key milestones.",
+                "Require exceptions reporting (what is off‑track, why, and fix date).",
+                "Ask for before/after measures for major initiatives."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Structured reporting exists; link to risk reduction is partial.",
+              "notes": "There is a plan and regular updates, but the connection to reduced business risk is weak. Some benefits are anecdotal.",
+              "followOn": [
+                "Tie each initiative to specific risk indicators and target thresholds.",
+                "Require benefits realisation tracking (did the risk indicator move?).",
+                "Commission spot audits of completed milestones for evidence."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Delivery is on plan, with clear evidence of outcomes and risk reduction.",
+              "notes": "Reports show timely delivery, measurable improvements, and effective handling of issues. The board sees how outcomes support business goals.",
+              "followOn": [
+                "Hold quarterly deep‑dives on major workstreams (successes, lessons, next steps).",
+                "Require post‑implementation reviews for significant initiatives.",
+                "Align executive incentives to outcome delivery (not activity)."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Delivery is predictable, value‑focused, and continuously improved.",
+              "notes": "The organisation reliably delivers strategy outcomes, adapts quickly, and demonstrates value for money and sustained risk reduction.",
+              "followOn": [
+                "Maintain independent assurance over delivery governance and data quality.",
+                "Benchmark outcomes (e.g., resilience, supplier assurance) with peers.",
+                "Embed a continuous improvement cycle (lessons learned → plan updates)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "C",
+      "name": "People",
+      "actions": [
+        {
+          "code": "C1",
+          "title": "Promote a positive cyber security culture",
+          "actionText": "Promote a cyber security culture that encourages positive behaviours and accountability across all levels. This should be aligned with the organisation’s strategy (Action B1).",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no assurance that a cyber security culture exists or supports the business strategy.",
+              "notes": "Cyber security is seen as a technical issue, not a shared responsibility. Staff may ignore basic practices (e.g., password hygiene, reporting suspicious emails). There is no visible leadership commitment.",
+              "followOn": [
+                "Ask management to confirm whether cyber culture is addressed in policies or training.",
+                "Require a board statement endorsing cyber as a business priority.",
+                "Add cyber culture as a topic in the next board meeting and request a baseline assessment."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Cyber culture is informally encouraged, but not documented or measured.",
+              "notes": "Managers may talk about security, but there is no structured approach. Staff behaviours vary widely, and accountability is unclear.",
+              "followOn": [
+                "Require a formal policy promoting cyber responsibility for all staff.",
+                "Ask for examples of communication reinforcing good behaviours.",
+                "Mandate reporting on incidents caused by human error to highlight cultural gaps."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Policies exist; limited assurance on adoption and accountability.",
+              "notes": "Cyber expectations are written down, but the board cannot confirm whether staff follow them or whether managers enforce accountability.",
+              "followOn": [
+                "Request metrics (e.g., % of staff completing basic cyber training).",
+                "Ask for evidence of enforcement (disciplinary or corrective actions).",
+                "Require a plan to embed cyber culture into onboarding and performance reviews."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Cyber culture is actively promoted, with training and accountability measures in place.",
+              "notes": "Staff understand their role in protecting data and systems. Training is regular, and managers are accountable for compliance. The board sees evidence of improvement.",
+              "followOn": [
+                "Introduce board-level KPIs (e.g., training completion, phishing test success rates).",
+                "Require annual culture reviews and improvement plans.",
+                "Commission independent checks (e.g., internal audit interviews or surveys) to validate culture."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Cyber culture is embedded and aligned with business strategy; behaviours are measured and improved continuously.",
+              "notes": "Cyber responsibility is part of everyday work and decision-making. Staff behaviours are tracked, and improvements are made proactively. The board sees culture linked to strategic goals.",
+              "followOn": [
+                "Maintain regular culture assessments and benchmark against industry norms.",
+                "Require executive reporting on cultural improvements tied to business outcomes.",
+                "Include cyber culture indicators in board dashboards and annual reports."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "C2",
+          "title": "Establish clear cyber security policies that support positive behaviours",
+          "actionText": "Gain assurance that there are clear policies that support a positive cyber security culture.",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no assurance that cyber security policies exist or support positive behaviours.",
+              "notes": "There may be no written policies, or they are outdated and ignored. Staff do not know what is expected of them, and managers have no basis for enforcing good practice.",
+              "followOn": [
+                "Ask management to confirm whether cyber policies exist and share a summary.",
+                "Require creation of basic policies covering key behaviours.",
+                "Add policy review as a standing board agenda item."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Policies exist informally or in draft, but not approved or communicated.",
+              "notes": "Some documents may exist, but they are not board-approved, widely shared, or enforced. Staff awareness is low.",
+              "followOn": [
+                "Require formal approval of cyber policies by the board or delegated committee.",
+                "Ask for a communication plan for policy awareness.",
+                "Mandate evidence of distribution (e.g., intranet, onboarding packs)."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Policies are approved and communicated, but adoption and enforcement are unclear.",
+              "notes": "Policies are published, but the board cannot confirm whether staff follow them or whether managers enforce compliance.",
+              "followOn": [
+                "Request metrics (e.g., % of staff acknowledging policies).",
+                "Ask for evidence of enforcement actions.",
+                "Require a plan to embed policies into onboarding and performance reviews."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Policies are embedded in processes, with monitoring and accountability in place.",
+              "notes": "Policies guide day-to-day behaviour and decision-making. Compliance is monitored, and managers are accountable for enforcement.",
+              "followOn": [
+                "Introduce board-level KPIs (e.g., policy compliance rates, audit findings).",
+                "Require annual policy reviews and updates.",
+                "Commission independent checks on policy effectiveness."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Policies are fully integrated, regularly updated, and drive continuous improvement.",
+              "notes": "Policies are part of normal governance, refreshed proactively, and linked to cultural improvement. The board sees evidence that policies reduce risk and support business goals.",
+              "followOn": [
+                "Maintain annual benchmarking of policies against industry standards.",
+                "Require executive reporting on policy effectiveness.",
+                "Include policy compliance indicators in board dashboards and annual reports."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "C3",
+          "title": "Improve board cyber literacy and secure behaviours",
+          "actionText": "Undertake training to improve your own cyber literacy and take responsibility for the security of the data and digital assets that you use.",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board doesn't receive cyber training or take personal responsibility for secure behaviours.",
+              "notes": "Board has little awareness of common cyber risks. There is no expectation or evidence of secure practices in board activities.",
+              "followOn": [
+                "Require mandatory annual cyber training for all directors.",
+                "Ask for attestation that directors use approved devices and accounts.",
+                "Add cyber literacy to the board skills matrix and plan to close gaps."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Board completes basic training ad‑hoc; personal responsibility is not documented or tracked.",
+              "notes": "Some training occurs, but there is no formal schedule or record. Expectations for directors’ secure behaviour are not clearly set.",
+              "followOn": [
+                "Set a training schedule with records maintained.",
+                "Require a Director Secure Practices Policy.",
+                "Ask for quarterly summaries of director training completion."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Training is documented and completed, with limited assurance over secure board behaviours.",
+              "notes": "Directors finish the modules, but the board lacks evidence that secure practices are consistently followed.",
+              "followOn": [
+                "Request evidence of secure practice (e.g., secure board portal usage).",
+                "Mandate periodic phishing awareness exercises for the board.",
+                "Include secure behaviour checks in board meeting setup."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Directors are cyber‑literate, with consistent secure behaviours and periodic refreshers.",
+              "notes": "Training is timely and relevant; directors apply secure practices. The board receives clear evidence of compliance.",
+              "followOn": [
+                "Introduce board KPIs (e.g., phishing test pass rates).",
+                "Require scenario briefings to keep literacy practical.",
+                "Commission independent checks of board practices annually."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Cyber literacy and secure behaviours are embedded, regularly updated, and role‑modelled by the board.",
+              "notes": "Directors demonstrate strong cyber hygiene and set expectations for the organisation. Practices adapt to new risks and regulations.",
+              "followOn": [
+                "Maintain annual board workshops with external experts.",
+                "Include cyber literacy in board evaluation and onboarding.",
+                "Publish an internal board statement of secure practices."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "C4",
+          "title": "Assure staff cyber training, education and awareness",
+          "actionText": "Gain assurance, using suitable metrics, that the organisation has an effective cyber security training, education and awareness programme.",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no assurance that staff receive cyber training or awareness activities.",
+              "notes": "There is no structured programme for training or awareness. Staff may not know how to spot phishing emails, protect passwords, or report incidents.",
+              "followOn": [
+                "Ask management to confirm whether any cyber training exists and share a summary.",
+                "Require development of a basic training plan for all staff.",
+                "Add training and awareness as a standing item in board risk reviews."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Training occurs ad‑hoc, with no metrics or assurance on coverage or effectiveness.",
+              "notes": "Some sessions or emails may be sent, but there is no formal schedule, tracking, or measurement.",
+              "followOn": [
+                "Require a formal training schedule with completion records.",
+                "Ask for a communication plan for awareness campaigns.",
+                "Mandate reporting on participation rates for all staff."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Training is documented and tracked, but effectiveness is unclear.",
+              "notes": "The organisation can show who completed training, but there is no evidence that staff apply what they learned.",
+              "followOn": [
+                "Request metrics beyond completion (e.g., phishing test success rates).",
+                "Ask for a plan to improve effectiveness.",
+                "Commission spot checks or surveys to validate staff understanding."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Training and awareness are regular, measured, and linked to behaviour change.",
+              "notes": "The programme covers all staff, uses varied methods, and tracks outcomes. The board sees evidence of improvement.",
+              "followOn": [
+                "Introduce board KPIs (e.g., % staff passing phishing tests).",
+                "Require annual effectiveness reviews and improvement plans.",
+                "Commission independent assurance on programme quality."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Training and awareness are embedded, proactive, and continuously improved.",
+              "notes": "Cyber education is part of the culture. Content is refreshed for new threats and technologies. Metrics show sustained improvement.",
+              "followOn": [
+                "Maintain annual benchmarking of training against industry standards.",
+                "Require executive reporting on cultural and behavioural improvements.",
+                "Include training effectiveness indicators in board dashboards."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "D",
+      "name": "Incident Planning, Response and Recovery",
+      "actions": [
+        {
+          "code": "D1",
+          "title": "Incident response and recovery plan",
+          "actionText": "Gain assurance that the organisation has a plan to respond to and recover from a cyber incident impacting business critical technology processes, information and services.",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no assurance that an incident response and recovery plan exists.",
+              "notes": "The organisation may not have any documented process for responding to cyber incidents. Roles, responsibilities, and recovery steps are unclear, leaving the business vulnerable to prolonged disruption.",
+              "followOn": [
+                "Ask management to confirm whether a plan exists and share a summary.",
+                "Mandate development of a basic incident response and recovery plan for critical systems.",
+                "Assign board oversight (e.g., risk committee) and set a deadline for completion."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "A plan exists informally or in draft, but not approved or tested.",
+              "notes": "There may be a draft document, but it is incomplete, untested, and not communicated to key staff. The board cannot rely on its effectiveness.",
+              "followOn": [
+                "Require formal approval of the plan and clear ownership for maintenance.",
+                "Ask for evidence of communication to relevant teams.",
+                "Schedule a board briefing on the plan’s scope and assumptions."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Plan is approved and documented, but limited assurance on readiness.",
+              "notes": "The plan exists and is shared, but the board cannot confirm whether staff know their roles or whether the plan works under pressure.",
+              "followOn": [
+                "Request tabletop exercises and a summary of lessons learned.",
+                "Ask for contact lists and escalation paths to be validated quarterly.",
+                "Require integration with business continuity plans."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Plan is tested regularly, with clear roles and improvement actions.",
+              "notes": "The organisation conducts exercises, updates the plan based on lessons learned, and staff understand their responsibilities. The board sees evidence of readiness.",
+              "followOn": [
+                "Introduce board KPIs (e.g., time to detect, time to recover critical systems).",
+                "Require annual scenario exercises involving senior executives and key suppliers.",
+                "Commission independent review of plan effectiveness."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Incident response and recovery are embedded, proactive, and aligned to business priorities.",
+              "notes": "The plan is part of normal governance, updated for new threats and technologies, and tested with realistic scenarios. The board sees continuous improvement and alignment with strategic goals.",
+              "followOn": [
+                "Maintain annual benchmarking against industry best practice.",
+                "Require executive reporting on improvements and lessons learned.",
+                "Include incident readiness indicators in board dashboards."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "D2",
+          "title": "Exercising the incident plan and learning lessons",
+          "actionText": "Gain assurance that there is at least annual exercising of the plan involving relevant internal and external stakeholders and that lessons from the exercise are reflected in the incident plan (Action D1) and risk assessments (Action A5).",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no assurance that the incident plan is tested or improved.",
+              "notes": "The plan may exist but has never been exercised. The board cannot confirm whether it works or whether staff know what to do.",
+              "followOn": [
+                "Ask management to confirm whether any exercises have been done.",
+                "Require a schedule for annual testing with key internal and external participants.",
+                "Add exercise results reporting to the board agenda."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Exercises occur informally, with limited scope and no lessons captured.",
+              "notes": "Some testing may happen, but it is not structured, documented, or used to improve the plan.",
+              "followOn": [
+                "Mandate formal documentation of exercise objectives, participants, and outcomes.",
+                "Require lessons learned reports and updates to the plan.",
+                "Ask for evidence of stakeholder involvement."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Annual exercises are documented, but follow-up improvements are inconsistent.",
+              "notes": "The organisation tests the plan, but lessons are not always implemented, and risk assessments are not updated.",
+              "followOn": [
+                "Require a tracking log for improvement actions from exercises.",
+                "Ask for integration of lessons into risk assessments and mitigation plans.",
+                "Commission spot checks on whether changes were applied."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Exercises are regular, structured, and drive continuous improvement.",
+              "notes": "The plan is tested annually with relevant stakeholders, lessons are captured, and improvements are implemented promptly.",
+              "followOn": [
+                "Introduce board KPIs (e.g., % of lessons implemented within 90 days).",
+                "Require cross-functional participation and supplier involvement.",
+                "Schedule board observation of at least one exercise per year."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Testing and improvement are embedded, with proactive scenario planning.",
+              "notes": "Exercises anticipate emerging threats and business changes. Lessons feed into strategy, risk assessments, and resilience planning.",
+              "followOn": [
+                "Maintain annual scenario planning workshops for the board and executives.",
+                "Benchmark exercise design and outcomes against industry best practice.",
+                "Require executive reporting on readiness trends and improvement actions."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "D3",
+          "title": "Board role and regulatory obligations during incidents",
+          "actionText": "In the event of an incident, take responsibility for individual regulatory obligations, such as reporting, and support the organisation in critical decision making and external communications.",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no clarity on its regulatory obligations or role during an incident.",
+              "notes": "Directors do not know what they must do if a breach occurs. This could lead to delays or non-compliance.",
+              "followOn": [
+                "Request a plain-English briefing on board obligations during a cyber incident.",
+                "Ask for a summary of reporting requirements.",
+                "Add incident role clarity to the board induction pack."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Board has basic awareness, but roles and escalation paths are unclear.",
+              "notes": "Directors know they have obligations but lack detail on timing, process, and who leads communications.",
+              "followOn": [
+                "Require a board incident response guide.",
+                "Ask for scenario-based training for directors.",
+                "Mandate contact lists and escalation paths to be validated quarterly."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Board roles are documented, but limited assurance on readiness.",
+              "notes": "Responsibilities are written down, but the board has not practiced or tested its involvement in decision-making or communications.",
+              "followOn": [
+                "Schedule annual board participation in an incident exercise.",
+                "Require pre-approved communication templates for regulators and stakeholders.",
+                "Ask for evidence of coordination with legal and PR teams."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Board is prepared and practiced for its regulatory and decision-making role.",
+              "notes": "Directors understand obligations, have tested their role in exercises, and can act quickly during an incident.",
+              "followOn": [
+                "Introduce board KPIs (e.g., time to confirm obligations during exercises).",
+                "Require post-exercise reviews of board performance.",
+                "Commission independent review of board readiness annually."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Board involvement is embedded and proactive, supporting resilience and compliance.",
+              "notes": "Board roles are clear, rehearsed, and integrated into incident governance. Directors anticipate regulatory and reputational risks and act decisively.",
+              "followOn": [
+                "Maintain annual scenario workshops for the board on emerging threats.",
+                "Require executive reporting on board readiness and improvements.",
+                "Include incident readiness indicators in board dashboards."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "D4",
+          "title": "Post-incident reviews and learning",
+          "actionText": "Gain assurance that a post incident review process is in place to incorporate lessons learned into future risk assessments (Action A5), response and recovery plans (Action D1) and exercising (Action D2).",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no assurance that lessons from incidents are reviewed or applied.",
+              "notes": "Incidents may occur, but there is no structured process to learn from them. The same mistakes could happen again.",
+              "followOn": [
+                "Ask management to confirm whether post-incident reviews are done.",
+                "Require a formal review process with documented outcomes.",
+                "Add lessons learned reporting to the board agenda."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Reviews occur informally, with limited documentation or follow-up.",
+              "notes": "Some lessons are discussed, but they are not recorded or used to improve plans and risk assessments.",
+              "followOn": [
+                "Mandate written reports after each incident, including root cause and actions.",
+                "Require tracking of improvement actions with deadlines and owners.",
+                "Ask for evidence of updates to plans and risk registers."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Reviews are documented, but integration into plans and risk assessments is inconsistent.",
+              "notes": "Lessons are captured, but the board cannot confirm whether they are applied to improve resilience.",
+              "followOn": [
+                "Require a log of lessons and status of implementation.",
+                "Ask for cross-references showing updates to plans and risk assessments.",
+                "Commission spot checks on whether changes were applied."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Post-incident reviews drive improvements in plans and risk management.",
+              "notes": "Lessons are systematically applied to response plans, exercises, and risk assessments. The board sees evidence of continuous improvement.",
+              "followOn": [
+                "Introduce board KPIs (e.g., % of lessons implemented within 90 days).",
+                "Require annual summary of lessons learned and improvements made.",
+                "Schedule board review of major incidents and outcomes."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Learning and improvement are embedded and proactive, shaping future resilience.",
+              "notes": "Lessons feed into strategy, risk appetite, and resilience planning. The organisation anticipates similar risks and prevents recurrence.",
+              "followOn": [
+                "Maintain annual benchmarking of lessons learned practices against peers.",
+                "Require executive reporting on systemic improvements from incidents.",
+                "Include learning indicators in board dashboards and governance reports."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "E",
+      "name": "Assurance and Oversight",
+      "actions": [
+        {
+          "code": "E1",
+          "title": "Cyber governance structure and roles",
+          "actionText": "Establish a cyber governance structure which is embedded within the wider governance structure of the organisation. This should include clear definition of roles and responsibilities, including ownership of cyber at executive and non-executive director level.",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no assurance of a defined cyber governance structure or roles.",
+              "notes": "Cyber activities are ad‑hoc. There is no clarity on who is accountable (executive or board), how decisions are made, or how issues are escalated.",
+              "followOn": [
+                "Require a cyber governance charter (how cyber fits into existing committees and management).",
+                "Ask for named roles at executive and board level with responsibilities and escalation paths.",
+                "Add cyber governance to the board agenda for approval and annual review."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Governance is informal or draft, with unclear responsibilities and escalation.",
+              "notes": "Some structures exist (e.g., a working group), but they are not approved or embedded. Decision rights and accountability are vague.",
+              "followOn": [
+                "Mandate formal approval of the governance model (committee terms of reference, meeting cadence).",
+                "Ask for a RACI covering key governance activities.",
+                "Require documented escalation for material issues to the board."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Governance is documented and approved; embedding and effectiveness are limited.",
+              "notes": "Roles and structures are on paper, but participation, decision-making, and follow‑through are inconsistent.",
+              "followOn": [
+                "Request attendance and action logs for governance meetings.",
+                "Require linkage of governance decisions to risk register updates and strategy execution.",
+                "Commission spot reviews of governance effectiveness and timeliness."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Cyber governance is embedded with clear roles, decisions, and reporting.",
+              "notes": "Committees meet regularly, decisions are made and tracked, and material issues reach the board with clear context and actions.",
+              "followOn": [
+                "Introduce board KPIs (e.g., time to escalate material issues, % actions closed on time).",
+                "Require annual effectiveness reviews (internal audit or independent).",
+                "Hold board deep‑dives on governance lessons and improvements."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Governance is mature, proactive, and integrated with overall corporate governance.",
+              "notes": "Cyber governance anticipates issues, integrates with risk, audit, and strategy, and provides concise, decision‑ready insights.",
+              "followOn": [
+                "Maintain cross‑committee alignment (risk, audit, remuneration where relevant).",
+                "Benchmark governance practices against peer SMEs and relevant codes.",
+                "Refresh charters and roles annually to reflect organisational change."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "E2",
+          "title": "Formal reporting, metrics and tolerances",
+          "actionText": "Require formal reporting on at least a quarterly basis, set suitable metrics to track, and agree tolerances for each. These should be aligned to the cyber strategy (Action B1) and based on the agreed cyber risk appetite (Action A3).",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board doesn't receive any formal cyber reporting or metrics.",
+              "notes": "Updates are sporadic and descriptive (activity‑based), with no measures, thresholds, or links to strategy/risk appetite.",
+              "followOn": [
+                "Require quarterly board reporting with a simple metric set and narrative.",
+                "Ask for defined thresholds (tolerances) that trigger escalation.",
+                "Tie metrics to strategy goals and risk appetite in plain English."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Reporting is ad‑hoc with limited metrics and no agreed tolerances.",
+              "notes": "Some numbers exist, but they are inconsistent and not aligned to strategy or risk appetite. The board cannot judge performance.",
+              "followOn": [
+                "Mandate a standard reporting template (metrics, exceptions, actions).",
+                "Require definitions for each metric (what it means, source, frequency).",
+                "Set tolerances for key metrics (e.g., patch timeliness, supplier assurance coverage)."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Quarterly reporting with documented metrics exists; alignment and escalation are partial.",
+              "notes": "Reports are regular, but some metrics do not link to outcomes or risk appetite, and escalation on breaches is inconsistent.",
+              "followOn": [
+                "Align metrics to business outcomes (availability, data protection, compliance).",
+                "Require exceptions reporting with corrective actions and dates.",
+                "Commission spot checks on data quality and metric relevance."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Reporting is regular, aligned, with clear tolerances and actions.",
+              "notes": "The board gets concise dashboards tied to strategy and appetite, with clear breaches and actions tracked to completion.",
+              "followOn": [
+                "Introduce trend analysis and forecasting for key metrics.",
+                "Require quarterly attestation on data quality and completeness.",
+                "Hold periodic board reviews of the metric set to keep it practical."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Metrics and reporting are embedded, decision‑ready, and continuously improved.",
+              "notes": "The metric set evolves as the business and threat landscape change. The board sees clear links to value and risk reduction.",
+              "followOn": [
+                "Maintain annual refresh of metrics against strategy, appetite, and external benchmarks.",
+                "Require automation where feasible to improve timeliness and accuracy.",
+                "Include board‑level summary of material exceptions and outcomes in annual reports where appropriate."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "E3",
+          "title": "Two-way dialogue with senior executives",
+          "actionText": "Establish regular two-way dialogue with relevant senior executives, including but not limited to, the chief information security officer (or equivalent).",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no structured dialogue with senior executives on cyber.",
+              "notes": "Engagement is minimal or only during incidents. The board lacks context and cannot challenge effectively.",
+              "followOn": [
+                "Schedule regular board sessions with the senior cyber lead (e.g., quarterly).",
+                "Ask for plain‑English briefings on risks, priorities, and constraints.",
+                "Define topics for discussion (top risks, supplier issues, investment trade‑offs)."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Dialogue is infrequent and informal; expectations are unclear.",
+              "notes": "Occasional updates occur, but there is no agreed cadence, format, or outcomes from discussions.",
+              "followOn": [
+                "Set a cadence and agenda for two‑way sessions.",
+                "Require action logs from discussions with follow‑up dates.",
+                "Invite cross‑functional leaders when relevant."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Regular dialogue exists; quality and follow‑through are mixed.",
+              "notes": "Meetings happen, but they may be technical, lack clarity, or not lead to decisions and actions.",
+              "followOn": [
+                "Ask for non‑technical summaries with clear options and recommendations.",
+                "Require decision papers for significant issues with pros/cons and business impact.",
+                "Commission periodic feedback from both board and executives to improve the sessions."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Two‑way dialogue is embedded and drives decisions and accountability.",
+              "notes": "Sessions are purposeful, result in clear actions, and improve mutual understanding. The board challenges constructively and supports delivery.",
+              "followOn": [
+                "Introduce board KPIs (e.g., % of agreed actions closed on time).",
+                "Hold deep‑dives on major topics (e.g., ransomware risk, supplier resilience).",
+                "Ensure closed‑loop reporting (what was decided, what changed as a result)."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Dialogue is proactive, strategic, and supports continuous improvement.",
+              "notes": "The board and executives anticipate issues, align on priorities, and adapt quickly. Communication is clear, concise, and focused on outcomes.",
+              "followOn": [
+                "Maintain annual joint workshops on horizon scanning and strategy updates.",
+                "Rotate executive participants to widen perspective.",
+                "Review board effectiveness in cyber oversight during annual evaluations."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "E4",
+          "title": "Audit and assurance over cyber",
+          "actionText": "Gain assurance that cyber security considerations (including the actions in this code) are integrated and consistent with existing internal and external audit and assurance mechanisms.",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no assurance that cyber is covered by audit or assurance mechanisms.",
+              "notes": "Internal and external audits may ignore cyber, or coverage is accidental. The board lacks independent views on controls and risks.",
+              "followOn": [
+                "Direct internal audit to include cyber governance and controls in the audit plan.",
+                "Ask for a summary of external assurance (e.g., certifications, independent reviews).",
+                "Add audit coverage of cyber to the board risk/audit committee agenda."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Cyber appears in isolated audits; scope and consistency are unclear.",
+              "notes": "Some audits touch cyber, but there is no plan to cover key risks and controls systematically.",
+              "followOn": [
+                "Require a risk‑based audit plan that maps audits to top cyber risks.",
+                "Mandate clear findings and action tracking with owners and deadlines.",
+                "Request coordination between internal audit and external reviewers to avoid gaps or duplication."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Cyber is included in plans, but coverage and follow‑through are mixed.",
+              "notes": "Audits occur, but high‑risk areas may be under‑reviewed, and remediation is slow or unverified.",
+              "followOn": [
+                "Set coverage targets for critical areas (e.g., access controls, supplier assurance).",
+                "Require periodic status reports on audit actions and overdue items.",
+                "Commission spot re‑tests to confirm remediation is effective."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Audit and assurance are integrated, risk‑based, with timely remediation.",
+              "notes": "Internal and external assurance provide clear, consistent views of key risks and controls. Actions are tracked and closed promptly.",
+              "followOn": [
+                "Introduce board KPIs (e.g., % of high‑risk findings closed within target time).",
+                "Require thematic reviews across multiple audits.",
+                "Hold annual assurance effectiveness reviews."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Assurance is embedded, proactive, and drives continuous improvement.",
+              "notes": "Assurance activities anticipate risk areas, support strategic decisions, and show sustained control maturity.",
+              "followOn": [
+                "Maintain annual benchmarking of assurance scope and depth against peers.",
+                "Align assurance outcomes with strategy refresh and risk appetite updates.",
+                "Publish a board summary of assurance impacts where appropriate."
+              ]
+            }
+          ]
+        },
+        {
+          "code": "E5",
+          "title": "Executive awareness of regulations and best practice",
+          "actionText": "Gain assurance that senior executives are aware of relevant regulatory obligations, as well as best practice contained within other Codes of Practice.",
+          "levels": [
+            {
+              "level": 0,
+              "maturityLevel": "Board has no assurance that executives know relevant regulations or best practice codes.",
+              "notes": "Leaders may be unaware of legal obligations or industry guidance, risking non‑compliance and poor practices.",
+              "followOn": [
+                "Request a plain‑English register of relevant regulations and codes with owners.",
+                "Ask for executive briefings on obligations and implications for the business.",
+                "Add regulatory awareness as a standing board item."
+              ]
+            },
+            {
+              "level": 1,
+              "maturityLevel": "Awareness is informal, with no evidence of application to the business.",
+              "notes": "Executives may know some rules but cannot show how they are reflected in policies, processes, or controls.",
+              "followOn": [
+                "Require written mapping from obligations to policies and controls.",
+                "Mandate compliance sign‑off by relevant executives.",
+                "Set reporting on gaps and planned remediation."
+              ]
+            },
+            {
+              "level": 2,
+              "maturityLevel": "Executives are briefed and acknowledge obligations; adoption is partial.",
+              "notes": "There is evidence of awareness and some implementation, but coverage is incomplete and monitoring is weak.",
+              "followOn": [
+                "Ask for a gap analysis with time‑bound actions to reach full coverage.",
+                "Require quarterly updates on compliance status with simple indicators.",
+                "Commission spot checks on high‑risk obligations."
+              ]
+            },
+            {
+              "level": 3,
+              "maturityLevel": "Obligations and best practices are understood, implemented, and monitored.",
+              "notes": "Policies and controls reflect regulatory requirements and recognised codes; reporting is clear; issues are addressed promptly.",
+              "followOn": [
+                "Introduce board KPIs (e.g., % of obligations with verified controls).",
+                "Require independent assurance on compliance‑critical areas.",
+                "Hold annual executive briefings to update on new or changed obligations."
+              ]
+            },
+            {
+              "level": 4,
+              "maturityLevel": "Awareness and adoption are embedded and proactive, supporting compliance and trust.",
+              "notes": "Executives anticipate regulatory changes and adopt relevant best practices early. The board sees strong, sustained compliance and alignment with strategy.",
+              "followOn": [
+                "Maintain horizon scanning and integrate findings into strategy and risk appetite.",
+                "Benchmark adoption of best practice codes against peers.",
+                "Include regulatory readiness indicators in board dashboards and annual governance reports."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+
+
+}
